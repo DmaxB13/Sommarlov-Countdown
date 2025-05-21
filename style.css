@@ -1,0 +1,77 @@
+/* Color Palette */
+:root {
+  --text-color: #F5F5F5;
+  --button-color: #8DC71E;
+  --hover-button-color: #69B41E;
+}
+
+/* Site */
+
+body {
+    background-image: url(background.JPEG);
+    background-size: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: Original Surfer;
+}
+
+.countdown-container {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    width: 80%;
+    height: 70%;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    margin-top: 5%;
+}
+.main-text {
+  font-size: 220%;
+  color: var(--text-color);
+  position: relative;
+}
+.countdown {
+  font-size: 500%;
+  color: var(--text-color);
+  position: relative;
+}
+.second-text {
+  color: var(--text-color);
+  position: relative;
+  font-size: 170%;
+}
+.school-days-countdown {
+  color: var(--text-color);
+  position: relative;
+  font-size: 300%;
+}
+
+.button {
+  position: relative;
+  background-color: var(--button-color);
+  border: transparent;
+  margin: 5%;
+  width: 70%;
+  height: 50px;
+  border-radius: 16px;
+  font-family: Original Surfer;
+  font-size: 120%;
+  color: var(--text-color);
+  transition: all ease-in-out .15s;
+}
+.button:hover {
+  background-color: var(--hover-button-color);
+  width: 71%;
+  height: 51px;
+  transition: all ease-in-out .15s;
+}
