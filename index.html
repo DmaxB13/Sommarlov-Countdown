@@ -6,23 +6,122 @@
     <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sommarlov Countdown</title>
+    <title>Sommarlov Co... Skolavslutning!</title>
     <link rel="shortcut icon" href="sun.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --text-color: #F5F5F5;
+            --button-color: #8DC71E;
+            --hover-button-color: #69B41E;
+            --font: Original Surfer;
+        }
+
+        @keyframes sun-animation {
+            0%   {rotate: 0deg;}
+            25%  {rotate: 90deg;}
+            50%  {rotate: 180deg;}
+            100% {rotate: 270deg;}
+        }
+
+        body {
+            background-image: url(background.JPEG);
+            font-family: var(--font);
+        }
+
+        .countdown-container {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+
+        width: 87%;
+        height: 70%;
+        position: relative;
+        top: -135px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        z-index: 1;
+        }
+        .text {
+            font-size: 250%;
+            color: var(--text-color);
+        }
+        .text2 {
+            font-size: 200%;
+            color: var(--text-color);
+        }
+
+        .button {
+            background-color: transparent;
+            border: transparent;
+        }
+        .sun {
+            width: 300px;
+            height: auto;
+            position: relative;
+
+            animation: sun-animation 5s linear infinite;
+            z-index: 2;       
+        }
+
+        .bara-bada-bastu {
+            top: -300000000;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+
+            width: 95%;
+            height: 90%;
+        }
+        .footer-text {
+            font-size: 90%;
+            word-wrap: normal;
+            color: var(--text-color);
+        }
+    </style>
 </head>
 <body>
-    <div class="countdown-container">
-        <center>
-            <h1 class="main-text">Dagar tills Sommarlov!</h1>
-            <h1 class="countdown">0</h1>
-            <h1 class="second-text">Skoldagar kvar till sommarlovet:</h1>
-            <h1 class="school-days-countdown">1</h1>
+    <audio autoplay loop>
+    <source src="Bara Bada Bastu.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+    <center>
+        <button onclick="test()" class="button">
+            <img src="sun.png" class="sun">
+        </button>
 
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                <button type="button" class="button">Klicka för 
-                    <br>en somrig suprise!</button>
-            </a>
-        </center>
-    </div>
+        <script>
+            function test() {
+                window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+                alert("Orkar inte fixa en länk utan reklam");
+            }
+        </script>
+        
+        <div class="countdown-container">
+            <h1 class="text" style="margin-top: 100px;">Skolavslutning!</h1>
+            <h1 class="text2">Hoppas du får ett riktigt bra sommarlov och tack
+                för att du har använt denna hemsidan
+            </h1>
+        </div>
+        <footer>
+            <h1 class="footer-text">Sången ('Bara Bada Bastu') är gjord av KAJ</h1>
+            <a href="https://www.youtube.com/watch?v=WK3HOMhAeQY" target="_blank">https://www.youtube.com/watch?v=WK3HOMhAeQY</a>
+            <h1 class="footer-text">Om det inte var lagligt att ha med denna låten på hemsidan
+                så stämm mig snälla inte, jag är en snäll liten pöjk :D
+            </h1>
+        </footer>
+    </center>
+    
 </body>
 </html>
